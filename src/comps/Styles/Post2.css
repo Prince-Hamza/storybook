@@ -1,0 +1,48 @@
+
+
+#mind2{
+    position: absolute;
+    top:15%;
+    width:100%;
+    height:50%;
+    font:italic 20px times new roman;
+    color:rgb(224, 76, 238);
+}
+
+
+
+#propost2{
+    position: absolute; width:70%;height:50%;top:46.1%;left:15%;
+    border-color: aqua;
+  }
+
+  #PPrV2{
+    position: absolute;width:20%;height:40%;top:30%;left:3%;
+    background-color:rgb(231, 231, 231);
+    border-radius:50px;
+    cursor:pointer;
+ 
+}
+
+#final{
+    position:absolute;
+    background-color: rgb(118, 255, 148);
+    top:90%;
+    height:7%;
+    width:100%;
+}
+
+#postbtn{
+
+    position:absolute;
+    background-color: rgb(252, 255, 75);
+    top:5%;
+    left:15%;
+    border-style: none;
+    height:90%;
+    width:70%;
+    border-radius:50px;
+    outline: none;
+    cursor:pointer;
+
+}

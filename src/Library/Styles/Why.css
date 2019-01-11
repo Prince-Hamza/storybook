@@ -1,0 +1,40 @@
+
+
+.Y{
+
+    position:absolute;
+    left : 100px;
+    width:400px;height:240px;
+    background-color: rgb(180, 177, 177);
+   
+
+}
+
+
+.name{
+    position:absolute;left:35%;top:-10%;
+    font:italic 25px times new roman;
+}
+#pic{
+    position: absolute;left:30%;width:43%;height:65%;top:15%;
+    border-radius: 50px;
+}
+
+.msgbtn{
+    position: absolute;
+    left: 15%
+    ;width:70%;height:10%;bottom:5%;
+    cursor:pointer;
+    border-style: none;
+    font:italic 15px times new roman;
+    border-radius:50px;
+
+
+}
+
+#GreenCircle{
+    position: absolute;
+    top:3%;left:25%;
+    width:3.5%;height:6%;
+    background-color: rgb(66, 250, 90)
+}
