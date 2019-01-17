@@ -6,21 +6,14 @@ import Feed from './comps/Feed.jsx'
 import Groups from './comps/Groups.jsx'
 import Search from './comps/Search.jsx'
 import Dynamic from '../src/Library/Dynamic.js'
-import firebase from 'firebase'
+import initialize from './comps/initialise'
+
 import './App.css'
 
 
 class App extends Component {
   componentDidMount() {
-    var config = {
-      apiKey: "AIzaSyABEcd6LanWp3JtR8Lc7cq_5-qWN1iSLTk",
-      authDomain: "superchat-b7d5b.firebaseapp.com",
-      databaseURL: "https://superchat-b7d5b.firebaseio.com",
-      projectId: "superchat-b7d5b",
-      storageBucket: "superchat-b7d5b.appspot.com",
-      messagingSenderId: "534462431203"
-    };
-    firebase.initializeApp(config);   
+    initialize()
   }
 
   render() {

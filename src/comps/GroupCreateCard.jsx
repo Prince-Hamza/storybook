@@ -1,33 +1,30 @@
 import React, { Component } from 'react';
 import './Styles/Groups.css'
+import './Styles/GroupCreateCard.css'
 
 
 class Card extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = {Card:true  };
     }
     render() {
         return (
             <div>
 
-                <div id = 'Overlay1'>
+              {this.state.Card && 
+              <div id = 'Overlay1' onClick = {()=>{this.setState({Card:false})}} >
 
-                <div id='Card' >
-            
+                <div id='Card' >            
                 <h5></h5>
-
-                <h4>Create  Group</h4>
-                <input placeholder='Group Name'  />              
-                <button>Create</button>
-
-                </div>
-
-                                
+                <h4 id = 'CreateGroup' >Create  Group</h4>
+                <input id = 'GroupName' placeholder='Group Name'  />              
+                <button id = 'CreateGroupBtn' > Create </button>
+                </div>                               
 
 
                 </div>
-
+          }
 
             </div>
         );

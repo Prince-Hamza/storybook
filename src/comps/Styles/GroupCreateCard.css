@@ -1,0 +1,25 @@
+
+#CreateGroup {
+    position: absolute;
+    font: bold italic 25px times new roman;
+    left:35%;
+
+}
+
+#CreateGroupBtn{
+    position: absolute;
+    left:3%;
+    top:83%;
+    width:90%;
+    background-color: white;
+    border-color: black;
+    border-width: 0.5px;
+    cursor:pointer;
+}
+
+#GroupName{
+    position: absolute;
+    width:90%;
+    left:3%;
+    top:70%;
+}

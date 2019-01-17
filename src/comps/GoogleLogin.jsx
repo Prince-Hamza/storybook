@@ -14,7 +14,7 @@ class GoogleLogin extends Component {
 
     }
 
-    Login = () => {        
+     Login = () => {        
 
             var provider = new firebase.auth.GoogleAuthProvider();
         

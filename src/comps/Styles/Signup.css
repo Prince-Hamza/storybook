@@ -19,7 +19,7 @@
   background-color: rgb(94, 173, 248);
 }
 #Si4text{
-   position: absolute;left:25%;top:-70%;
+   position: absolute;left:25%;top:5%;
    font:italic 20px times new roman;
    color:rgb(175, 219, 255);   
 }
@@ -70,7 +70,7 @@
 }
 
 #or{position: absolute;
-  top:65%;left:41%;
+  top:70%;left:41%;
   width:40%;height:6%;
   color:rgb(8, 8, 8);
 

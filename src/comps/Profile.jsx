@@ -7,23 +7,35 @@ import Friends from './Friends.jsx'
 import Slide from './Slide.jsx'
 import Timeline from './Timeline.jsx'
 import FeedSide from './FeedSide.jsx'
+import firebase from 'firebase'
+import initialize from './initialise'
 import './Styles/Profile.css'
 
 class Profile extends Component {
     componentDidMount() {
+        console.log('mounted')
+       setTimeout(()=>{
+         this.setState({Connected:true})
+       },1000)
       
+   
+    
     }
     constructor(props) {
         super(props);
         this.state = { 
             Timeline:true,
             Profile:true,
-            About:false
+            About:false,
+            Connected:false
          };
         var Data = this.props.match              
         var params = Data.params;
         Routeid = params.id  
 
+       
+
+      
 
 
 
@@ -40,22 +52,26 @@ class Profile extends Component {
 
 
     render() {      
-        return (<div>
+        if(this.state.Connected){
+            return (<div>
+                <FeedSide />            
+                <Slide Key = {Routeid} />
+                <ProPix Key = {Routeid} />            
+                <Menu Hello = {this.Change} />  
+    
+                  { this.state.Timeline && <Timeline Key = {Routeid} />}
+                  {   this.state.Profile && <ProPost Key = {Routeid} />  }   
+                  {   this.state.About &&  <About/>     }  
+                  {   this.state.About &&  <Friends/>   }  
+                 
+            </div>           
+            );
+        }
 
-            <FeedSide />            
-            <Slide />
-            <ProPix/>            
-            <Menu Hello = {this.Change} />   
-
-             { this.state.Timeline && <Timeline Key = {Routeid} />}
-
-              {   this.state.Profile && <ProPost Key = {Routeid} />  }   
-              {   this.state.About &&  <About/>     }  
-              {   this.state.About &&  <Friends/>     }  
-             
-
-        </div>           
-        );
+        return(
+            <p></p>
+        )
+     
     }
 }
 

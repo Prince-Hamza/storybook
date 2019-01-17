@@ -9,10 +9,10 @@ class FbLogin extends Component {
     render() {
         return (
             <div>
-                 <div className = 'SignInput' id = 'Si4'  onClick = {()=>{this.props.move()}} >
+                 {/* <div className = 'SignInput' id = 'Si4'  onClick = {()=>{this.props.move()}} >
               <img id = 'fblogo' src = 'https://www.freeiconspng.com/uploads/facebook-f-logo-transparent-facebook-f-22.png' />
                  <p  id ='Si4text' > Facebook Login </p>
-                 </div>
+                 </div> */}
 
             </div>
         );

@@ -27,7 +27,7 @@ class Slide extends Component {
                 }} 
                 id ='searchbar' />
                 <button id = 'searchbtn' >search</button>
-              <button id = 'me' onClick ={()=>{this.Route('me')}}  >Me</button>
+              <p id = 'me' onClick ={()=>{this.Route(this.props.Key)}}  > UserName </p>
                 </div>
             </div>
         );

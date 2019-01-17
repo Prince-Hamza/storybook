@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FeedSide from './FeedSide.jsx';
 import Slide from './Slide.jsx'
 import './Styles/Groups.css'
+import Timeline from './Timeline.jsx'
 
 class Groups extends Component {
     constructor(props) {
@@ -22,13 +23,15 @@ class Groups extends Component {
 
                 <img 
                 id = 'GroupCover' 
-                src ='https://upload.wikimedia.org/wikipedia/commons/d/d5/Pic_de_neige_cordier_Face_E.jpg'
+                src = 'https://cdn2.outdoorphotographer.com/2018/05/a7RIIYNPSpringApr2015_DSC5460ElCapitanThreeBrothersReflection_OP.jpg'
                 />
 
-                <div id='undercover'>
-                <button>Joined</button>
-                <button>Share</button>
+                <div id='undercover'>              
                 </div>
+
+                <Timeline /> 
+
+
 
 
             </div>            
