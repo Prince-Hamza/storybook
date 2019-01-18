@@ -1,6 +1,7 @@
 import firebase from 'firebase'
 import './Styles/Login.css'
 import React, { Component } from 'react';
+import { userInfo } from 'os';
 
 class GoogleLogin extends Component {
     constructor(props) {
@@ -19,8 +20,17 @@ class GoogleLogin extends Component {
             var provider = new firebase.auth.GoogleAuthProvider();
         
            return firebase.auth().signInWithPopup(provider).then((result) =>  {
-                var token = result.credential.accessToken;
-                // Userinfo = result.user;
+                //var token = result.credential.accessToken;
+                var Userinfo = result.user;
+                var i = firebase.auth().currentUser.uid
+                var x = result.additionalUserInfo.isNewUser;if(x){
+                    firebase.database().ref('users/' + i).set({
+                        ID:i,
+                        Name: Userinfo.displayName,
+                        Photo:Userinfo.photoURL,
+                        Online:true
+                    })
+                }
 
                 this.setState({LoginInfo:result.user,F:true})
                 this.props.OnComplete(this.state.LoginInfo)
@@ -46,6 +56,7 @@ class GoogleLogin extends Component {
     render() {
        
         return (
+           
             <div>
      <img onClick ={()=>{this.Login()}} id = 'GoogleLogin' src = 'https://i.stack.imgur.com/XzoRm.png' />
             </div>

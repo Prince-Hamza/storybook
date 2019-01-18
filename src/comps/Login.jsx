@@ -12,6 +12,16 @@ class Login extends Component {
     
        return firebase.auth().signInWithPopup(provider).then((result) =>  {
             var token = result.credential.accessToken;
+            var Userinfo = result.user;
+            var i = firebase.auth().currentUser.uid
+            var x = result.additionalUserInfo.isNewUser;if(x){
+                firebase.database().ref('users/' + i).set({
+                    ID:i,
+                    Name: Userinfo.displayName,
+                    Photo:Userinfo.photoURL,
+                    Online:true
+                })
+            }
 
             this.setState({LoginInfo:result.user,F:true})
             this.props.OnComplete(this.state.LoginInfo) 
