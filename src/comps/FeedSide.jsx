@@ -2,16 +2,33 @@ import React, { Component } from 'react';
 import Card from './GroupCreateCard.jsx'
 import PropTypes from 'prop-types';
 import './Styles/Feed.css'
+import firebase from 'firebase';
 
 class FeedSide extends Component {
     constructor(props) {
         super(props);
         this.state = {
             Active:false,
-            Route:false
+            Route:false,
+            GroupNames:[]
          };
+
+        var i = firebase.auth().currentUser.uid
+         firebase.database().ref('users/' + i + '/MyGroups')
+         .once('value' , (res) => {
+             res.forEach((group)=>{
+                 var Group = group.val()
+                 GNs.push(Group.Name)                                  
+             })
+             this.setState({GroupNames:GNs})
+         })
+
+         
+
+
     }
 
+    
 
     Route = () => {
         alert('Routing')            	
@@ -27,12 +44,28 @@ class FeedSide extends Component {
             <div id = 'feedside'>
             <br></br><br></br>
         <p className = 'Feedtext' id = 'Shortcuts' >Shortcuts</p>
-        <h3 className = 'Feedtext' id = 'Sname' onClick ={()=>{this.Route()}} >Group name </h3>              <br></br><br></br>
+
+
+        {this.state.GroupNames.map(groupname => {
+            return (
+                <h3 className = 'Feedtext' id = 'Sname' onClick ={()=>{this.Route()}} > {groupname} </h3>
+            )
+        })}
+
+
+
+
+
+
+
+
+
+        <br></br><br></br>
 
 <p className = 'Feedtext' id = 'Create'>Create</p>
-        <h3 className = 'Feedtext' id = 'CreateGroup'
 
-         onClick= {()=>{this.setState({Active:!this.state.Active})}} >Group</h3>
+        <h6 className = 'Feedtext' id = 'CreateGroup'
+         onClick= {()=>{this.setState({Active:!this.state.Active})}} > Group</h6>
 
        
         </div>
@@ -44,6 +77,10 @@ class FeedSide extends Component {
 }
 
 export default FeedSide;
+
+
+var GNs = []
+
 
 FeedSide.contextTypes = {
 	router: PropTypes.object

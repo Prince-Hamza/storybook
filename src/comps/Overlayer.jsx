@@ -19,8 +19,6 @@ class OVerlayer extends Component {
  
                 <div id = 'Overlayer' >
 
-
-
              {this.state.Post &&  <Post2 Key = {this.props.Key} Close = {this.Up} /> }   
 
                 </div>

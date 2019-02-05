@@ -59,12 +59,12 @@
 
   .roundface{
       position: absolute;
-      width:3% ; height : 1.5%; left: 1.5%;
+      width:3% ; height : 0.8%; left: 1.5%;
   }
 
 
 
-  .PostImage{
+  .PostImage  {
     
     width:100%; 
     height:80%;
@@ -90,7 +90,7 @@
   font: italic 20px times new roman;
   cursor:pointer;
 }
-#like:hover{  color:rgb(0, 255, 221)}#like:active{  color:rgb(245, 146, 245)}
+#like:hover{  color:rgb(70, 71, 71)}#like:active{  color:rgb(245, 146, 245)}
 
 #share{
   position: absolute; 
@@ -99,4 +99,15 @@
   cursor:pointer;
 }
 #share:hover{  color:rgb(0, 255, 221)}#share:active{  color:rgb(245, 146, 245)}
+
+.Reaction {
+  position:absolute;
+  left:3%;
+  width:90%;
+  height:2%;
+  margin:20px;  /* and that, will result in a 10px gap */
+  /* text-align: center;
+  line-height: 70px; */
+
+}
 

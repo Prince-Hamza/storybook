@@ -3,16 +3,26 @@ import FeedSide from './FeedSide.jsx';
 import Slide from './Slide.jsx'
 import './Styles/Groups.css'
 import Timeline from './Timeline.jsx'
+import Post from './Post.jsx'
+import Overlayer from './Overlayer.jsx'
 
 class Groups extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = {  
+            Overlayer:false
+        };
        // var Data = this.props.match  
      
     }
 
-  
+    NoOverlayer = () => {
+        this.setState({Overlayer:false})        
+    }
+
+    AdvPost = () =>{
+        this.setState({Overlayer:true})
+    }
 
     render() {
         return (
@@ -28,6 +38,9 @@ class Groups extends Component {
 
                 <div id='undercover'>              
                 </div>
+
+                <Post Overlayer ={this.AdvPost}  />
+                {this.state.Overlayer && <Overlayer Key = {this.props.Key} Off = {this.NoOverlayer}   /> }       
 
                 <Timeline /> 
 

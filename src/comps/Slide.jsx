@@ -11,7 +11,7 @@ class Slide extends Component {
     }
 
     Route = (p) => {
-		this.context.router.history.push('/Profile/' + p)            
+		this.context.router.history.push('/Search/' + p)            
     }
 
     render() {

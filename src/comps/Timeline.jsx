@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
 import './Styles/Timeline.css'
+import 'react-bootstrap'
 
 class TImeline extends Component {
     componentDidMount() {
@@ -13,22 +14,17 @@ class TImeline extends Component {
          };
         var keynum = 0
          firebase.database().ref('users/' + this.props.Key + '/Timeline')
-         .once('value').then((x)=>{             Void = x.val() || true
+         .once('value').then((x)=>{Void = x.val() || true
 
-             var keys = Object.keys(Void)
-             
-                            
+             var keys = Object.keys(Void)                          
             x.forEach(i => { 
-                var data = i.val()  
-                
+                var data = i.val()                  
                 data.key = keys[keynum];
-             //   alert(data)
-                
-
-                
+             //   alert(data)              
                 Posts.push(data)                 
                 keynum += 1
             })  
+            Posts.reverse()
             firebase.database().ref('users/' + this.props.Key).once('value' ,(x) =>{ 
                 MyInfo.push(x.val())
                 this.setState({Complete:true})
@@ -59,40 +55,27 @@ class TImeline extends Component {
 
     render() {
         if (this.state.Complete) {
-            if(Void === true){
-              //  alert('void')
+            if(Void === true){            
                 return(<h1 className = 'void' >There are no posts to show</h1>)
-            }
-            
-
+            }           
             return (
                 <div>
                      <div className ="flex-container">
 
                      {Posts.map(x=>{
-                                           
+                            k++      
                          return(
-                            <div className = 'Post' >
-                               <img src = {MyInfo[0].Photo} className = 'roundface'  />
+                            <div key = {k} className = 'Post' >
+                               <img className= 'rounded-circle' style = {{ position:'absolute' , left:'2%',width:'3%',height:'26px'}} src = {MyInfo[0].Photo}   />
                                <h3 className = 'nm' >{MyInfo[0].Name}</h3>
-                               <input className = 'PostText' value = {x.Text} ></input>
+                               <input className = 'PostText' onChange={()=>{console.log('ok')}} value = {x.Text} ></input>
                                <img className = 'PostImage' src = {x.Image} /> 
-
-
-                             <div className = 'Reaction' >
-                                
+                               <div className = 'Reaction' >                                
                                <h3 onClick = {()=>{  this.Like(x.key) }} id = 'like' > Like  </h3>
                                <h3 id = 'Comment' > Comments </h3>
                                <h3 onClick ={()=>{this.Share(x)}} id = 'share' > Share </h3>
-
-                             </div>
-                               
-
-
-                               
-
-
-                           </div> 
+                             </div>                                                      
+                            </div> 
                          )
                      })}
                      </div>
@@ -110,4 +93,4 @@ class TImeline extends Component {
 export default TImeline;
 
 var Posts = [] , MyInfo = []
-var Void = false
+var Void = false , k = 0

@@ -29,7 +29,7 @@ class App extends Component {
 
         <Route  exact path="/Groups/:id"  render = {(props)=>  <Groups {...props} />    }  />
 
-        <Route  exact path="/Search/:id"  render = {(props)=>  <Search {...props} />    }  />
+        <Route  exact path="/Search/:id"  render = {(props)=>  <Dynamic {...props} />    }  />
 
 
       </div>

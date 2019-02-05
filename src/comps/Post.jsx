@@ -15,12 +15,12 @@ class Post extends Component {
 <div id ='cmp' > </div> </div>
 
 <input onClick = {()=>{this.props.Overlayer()}} id ='mind' placeholder = "What's on your mind" ></input>  
-
-<div  id = 'downpost' > 
+{/* 
+<div  id = 'downpost2' > 
 
 <div id = 'PPrV' > <p id='PV' >Photo/Video</p>   </div>
 
-  </div>     
+  </div>      */}
 
 </div>
             </div>
