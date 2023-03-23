@@ -1,0 +1,16 @@
+
+
+
+#k{
+    position: absolute;
+    color:rgb(224, 47, 47);
+}
+
+body {
+    background-color: aqua;
+}
+
+ ::-webkit-scrollbar {
+     display: none;
+ }
+

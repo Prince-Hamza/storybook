@@ -1,0 +1,52 @@
+
+
+#image{
+    position:absolute;
+    left:10%;
+    top:10%;
+    width:12%;
+    height:80%;
+    cursor:pointer;
+}
+
+
+#name{
+    position: absolute;
+    left:25%;
+    top:10%;
+    cursor:pointer;
+}
+
+#X{
+
+    position:absolute;
+    left:5%;
+    top:15%;
+    width:40%;
+    height:30%;
+    cursor:pointer;
+
+}
+
+#Y{
+
+    position:absolute;
+    left:50%;
+    top:15%;
+    width:40%;
+    height:30%;
+    cursor:pointer;
+
+}
+
+
+#cross{
+    position:absolute;
+    right:5%;
+    top:35%;
+    width:3.5%;
+    height:30%;
+    cursor:pointer;
+}
+
+

@@ -1,0 +1,113 @@
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color:#222;
+
+    position:absolute;
+    top:64%; left: 15% ;  width:70%; 
+
+  }
+
+
+  .void{
+    position : absolute;
+
+    background-color: black;
+    top:65%; left:15%;
+    color: white;
+    width: 70%; height:998%;
+    font:italic 40px times new roman    
+
+  }
+
+  
+
+
+  .Post {
+    background-color: black;
+    color: white;
+    width: 100%; height:700px;
+    margin:5px;  /* and that, will result in a 10px gap */
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+
+  } 
+
+  .nm {
+
+    position: absolute;
+    color: rgb(163, 255, 126);
+    font : italic 25px times new roman;
+    left : 6%;
+
+
+  }
+
+  .PostText {
+
+    background-color: rgb(15, 13, 13);
+    width:99%;
+    height:5%;
+    outline:none;
+    border-style: none;
+    color: rgb(163, 255, 126);
+    font:italic 15px times new roman;
+    overflow: auto;
+  }
+
+  .roundface{
+      position: absolute;
+      width:3% ; height : 0.8%; left: 1.5%;
+  }
+
+
+
+  .PostImage  {
+    
+    width:100%; 
+    height:80%;
+
+  }
+
+  br {
+    line-height:2px;
+
+ }
+
+  #Comment{
+    position: absolute;
+    left:45%;
+    font: italic 20px times new roman;
+    cursor:pointer;
+  }
+  #Comment:hover{  color:rgb(0, 255, 221)}#Comment:active{  color:rgb(245, 146, 245)}
+
+#like{
+  position: absolute;
+  left:3%;
+  font: italic 20px times new roman;
+  cursor:pointer;
+}
+#like:hover{  color:rgb(70, 71, 71)}#like:active{  color:rgb(245, 146, 245)}
+
+#share{
+  position: absolute; 
+  left:90%;
+  font: italic 20px times new roman;
+  cursor:pointer;
+}
+#share:hover{  color:rgb(0, 255, 221)}#share:active{  color:rgb(245, 146, 245)}
+
+.Reaction {
+  position:absolute;
+  left:3%;
+  width:90%;
+  height:2%;
+  margin:20px;  /* and that, will result in a 10px gap */
+  /* text-align: center;
+  line-height: 70px; */
+
+}
+

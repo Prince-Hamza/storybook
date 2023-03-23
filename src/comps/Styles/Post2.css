@@ -1,0 +1,41 @@
+
+
+#mind2{
+    position: absolute;
+    top:5%;
+    width:100%;
+    height:25%;
+    font:italic 20px times new roman;
+    color:rgb(224, 76, 238);
+}
+
+
+
+#propost2{
+    position: absolute; width:70%;height:50%;top:20%;left:15%;
+    border-color: aqua;
+  }
+
+
+#final{
+    position:absolute;
+    background-color: rgb(118, 255, 148);
+    top:120%;
+    height:7%;
+    width:100%;
+}
+
+#postbtn{
+
+    position:absolute;
+    background-color: rgb(252, 255, 75);
+    top:5%;
+    left:15%;
+    border-style: none;
+    height:90%;
+    width:70%;
+    border-radius:50px;
+    outline: none;
+    cursor:pointer;
+
+}

@@ -1,0 +1,107 @@
+.social {
+  position: fixed;
+  top : 47%;  
+  width : 20%;
+  height : 5%;  
+  cursor : pointer ;
+  z-index : 1;
+  border-radius: 50px;
+  border-style:none;
+  outline: none;
+  background-color:rgba(255, 115, 185, 0.678) ;
+  box-shadow: 0px 0px 15px 0px rgb(245, 239, 239);
+}
+#google:hover{
+  box-shadow: 0px 0px 30px 0px rgb(245, 239, 239);
+  background-color:rgba(133, 239, 253, 0.678) ;
+
+
+
+
+
+}
+
+#google {
+  left : 40%   ;
+  outline:none 
+}
+
+#twitter {
+  left : 53% 
+}
+
+#github {
+left : 49%
+}
+
+#scs {
+  position:absolute;
+  z-index: 1;
+  color:white;
+}
+
+@-webkit-keyframes mymove {
+  from {with:2% ; height: 3%;}
+  to {width : 2.3%; height: 3.3%}
+}
+
+#btn {
+  position : absolute;  width:30%;  height:7%;  left:3%; top:5%;
+  border-style:none;
+  border-radius:100px;
+  color: rgb(255, 113, 236);
+  background-color : rgba(255, 213, 249, 0.897);
+  box-shadow: 0px 0px 10px 0px rgb(240, 36, 213);
+  font: bold italic 20px times new roman;
+  outline:none;
+  cursor:pointer
+ 
+}
+
+#btn:hover{
+  color: rgb(255, 190, 246);
+  box-shadow: 0px 0px 20px 0px rgb(0, 255, 221);
+  transform: translateY(-4px);
+  background-color: rgb(255, 255, 16)
+}
+
+#btn:active{
+  color:cyan;
+  box-shadow: 0px 0px 30px 0px rgb(0, 255, 221);
+
+}
+
+#button{
+  position : absolute;  width:30%;  height:7%;  left:35%; top:50%;
+  border-style:none;
+  border-radius:100px;
+  color: cyan;
+  background-color : rgba(255, 213, 249, 0.897);
+  box-shadow: 0px 0px 30px 0px rgb(0, 255, 221);
+  font: bold italic 20px times new roman;
+  outline:none;
+  cursor:pointer
+  
+  }
+
+
+#fancytext{
+  position:absolute;  top:10%; left : 43%;width:300px;height :75px;
+  font : italic 50px times new roman;
+  color : cyan;
+  text-shadow: 0px 20px rgb(196, 255, 250);
+  box-shadow: 0px 0px 70px 0px rgb(0, 255, 221);
+  border-radius:100px;
+
+
+}
+
+#theme{
+  position: fixed;
+}
+
+
+
+
+
+

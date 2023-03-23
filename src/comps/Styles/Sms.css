@@ -1,0 +1,52 @@
+
+
+
+
+
+#smsoverlayer{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color: rgba(36, 35, 35, 0.493);
+    z-index:-1;
+}
+
+#smscard{
+
+    position:absolute;
+    top:40%;
+    left:15%;
+    width:60%;
+    height:40%;
+    background-color: rgba(142, 247, 230, 0.507);
+    z-index:1;
+
+}
+
+#mobilenum{
+
+    
+    position:absolute;
+    top:5%;
+    left:5%;
+    
+
+}
+
+#smsbtn{
+    position:absolute;
+    top:20%;
+    left:5%;
+    width:30%;
+    height:12%;
+    background-color: rgba(46, 49, 49, 0.507);
+    border-style:none;
+    border-radius:50px;
+    outline:none;
+    cursor:pointer;
+}
+
+#recaptcha-container{
+    position:absolute;
+    bottom:0px;
+}

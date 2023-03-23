@@ -1,0 +1,47 @@
+#cover{
+    position: absolute;top:0%;
+    width:70%;
+    height:150%;
+  
+}
+#coverdiv{
+    position: absolute;
+    width:100%;
+    height:35%;
+    top:5%;
+    left:15%;
+    overflow: hidden; 
+
+}
+
+#Profilepic{
+    position: absolute;
+    top:27%;    width:12%;  height:16%; left:20%;
+    border-style: solid;
+    border-color: rgb(247, 3, 255);
+    z-index: 1
+}
+
+
+
+
+
+#menucontainer{
+    position: absolute;
+    width:70%;top:40%;height:6%;left:15%;
+    background-color: white;
+}
+.PMI{
+    position: absolute;  top:30%;width:20%;height:100%;
+    font:italic 20px times new roman;
+    cursor: pointer;
+    color: rgb(227, 155, 255);       
+ }
+
+ #pmi1{left:30%;}#pmi2{left:45%}#pmi3{left:60%}#pmi4{left:75%}
+
+
+
+
+
+body{background-color: rgb(43, 42, 42)}

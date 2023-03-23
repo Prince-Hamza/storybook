@@ -1,0 +1,50 @@
+
+
+#feedside{
+    position: absolute;
+    width:15%;height:1058%;
+    left:0px;top:4.8%;
+    background-color: rgb(15, 15, 15);
+}
+
+.Feedtext{
+    color: white;
+    cursor: pointer;
+    font:italic 20px times new roman;
+}
+
+body {
+    background-color: rgb(248, 14, 217)
+}
+
+#Shortcuts{
+    position: absolute;
+    top:1%;
+    background-color: rgba(88, 90, 90, 0.473)
+
+}
+
+#Sname{
+
+    position: absolute;
+    top:2%;
+
+}
+
+#Create{
+
+font-size: 20px;
+position: absolute;
+top:5%;
+background-color: rgba(88, 90, 90, 0.473)
+
+
+}
+
+#CreateGroup{
+    
+    position: absolute;
+    top:6%;
+    left:0%;
+
+}

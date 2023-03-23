@@ -1,0 +1,19 @@
+
+
+
+
+#uploading {
+    position: 'absolute';
+    top: 90%;
+    left:40%;
+    font : italic 25px times new roman;
+}
+
+#uploader {
+    position: absolute;
+    top:-70%;
+    width:100%;
+    color:rgb(240, 20, 56);
+    background-color: rgb(211, 145, 255);
+   
+}
