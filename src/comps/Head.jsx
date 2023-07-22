@@ -14,22 +14,8 @@ class Head extends Component {
     }
 
     TesT = () => {
-        var storageRef = firebase.storage().ref();
-
-
-
-
+        var storageRef = firebase.storage().ref()
     }
-
-
-
-
-
-
-
-
-
-
 
     render() {
         return (
@@ -43,5 +29,5 @@ class Head extends Component {
     }
 }
 
-export default Head;
+export default Head
 var P = ''
