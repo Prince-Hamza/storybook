@@ -9,7 +9,7 @@ export default defineConfig({
     loader: "jsx",
   },
   build: {
-    outDir: 'build',
+    outDir: 'dist',
   },
   optimizeDeps: {
     esbuildOptions: {
