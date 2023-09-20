@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Main from './comps/Main'
 import './App.css'
 import { Col, Form, Row } from 'react-bootstrap'

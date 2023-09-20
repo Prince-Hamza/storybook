@@ -13,15 +13,11 @@ class Head extends Component {
         this.state = {};
     }
 
-    TesT = () => {
-        var storageRef = firebase.storage().ref()
-    }
-
     render() {
         return (
             <div>
                 <div id='blue' >
-                    <p id='Storybook' onClick={() => { this.TesT() }} >Storybook</p>
+                    <p id='Storybook'  >Storybook</p>
                     <Login />
                 </div>
             </div>

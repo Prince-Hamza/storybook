@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
 import 'firebase/compat/database'
 import 'firebase/compat/firestore'
+import {Col,Row} from 'react-bootstrap'
 
 class Login extends Component {
+
     constructor(props) {
         super(props);
         this.state = {};
     }
-    iLogin = () => {
+
+    GoogleLogin = () => {
 
         var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -27,25 +30,43 @@ class Login extends Component {
             }
 
             this.setState({ LoginInfo: result.user, F: true })
-            this.props.OnComplete(this.state.LoginInfo)
+            alert('Login Successful')
 
         }).catch(function (error) {
             // var errorCode = error.code;
-            // var errorMessage = error.message;          
+            // var errorMessage = error.message;
         });
 
     }
+
+
+    EmailLogin = () => {
+
+    }
+
+
+
     render() {
         return (
-            <div>
-                <p style={{ marginBottom: '15px' }} id='pe' >Email or Phone</p>
+            <Row>
+            <Col lg={12} xs={12} >
+              <Row>
+                 <p id='pe' >Email </p>
+                 <input className='LoginInput' id='Email' ></input>
+              </Row>
+            </Col>
 
-                <input className='LoginInput' id='Password' ></input>
-                <p id='pp' >Password</p>
-                <input className='LoginInput' id='Email' ></input>
-                <button id='Login' onClick={() => { this.iLogin() }} >Login</button>
-            </div>
-        );
+            <Col lg={12} xs={12} >
+               <p id='pp' >Password</p>
+               <input className='LoginInput' id='Password' ></input>
+            </Col>
+
+            <button id='Login' onClick={() => { this.EmailLogin() }}>
+                Login
+            </button>
+
+            </Row>
+        )
     }
 }
 

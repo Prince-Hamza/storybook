@@ -13,17 +13,22 @@
 }
 
 #Login{
-    position: absolute;left:85%;top:38%;width:7%;height:23%;
+    position: absolute;
+    left:87%;
+    top:52%;
+    width:7%;
+    height:23%;
     border-style:none;
     border-radius:50px;
-    background-color: yellow;                       
+    background-color: yellow;
     color: rgb(123, 231, 34);
     cursor:pointer;
-    outline:none;  
+    outline:none;
     font:italic 15px times new roman
 }
 .LoginInput{
-    position: absolute;top:40%;
+    position: absolute;
+    top:55%;
     border-style:none;
     border-radius:50px;
     outline: none;
@@ -34,4 +39,3 @@
 
 #pp{position: absolute;left:73%;top:10%}
 #pe{position: absolute;left:57%;top:10%}
-

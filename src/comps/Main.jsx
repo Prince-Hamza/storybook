@@ -3,12 +3,19 @@ import Head from './Head.jsx';
 import SignUp from './SignUp';
 import PropTypes from 'prop-types';
 import SmsAuth from './SmsAuth.jsx';
+import { initializeApp } from "firebase/app"
+import firebase from 'firebase/compat/app'
+import {firebaseConfig} from '../config.js'
 
 class Main extends Component {
     constructor(props) {
         super(props);
         this.state = { SmsAuth: false };
     }
+
+   componentDidMount = () => {
+      if (!firebase.apps.length) firebase.initializeApp(firebaseConfig)
+   }
 
     Navigate = (data) => {
         this.context.router.history.push('/Profile/' + data.uid)
