@@ -8,9 +8,10 @@ import firebase from 'firebase/compat/app'
 import {firebaseConfig} from '../config.js'
 
 class Main extends Component {
+
     constructor(props) {
         super(props);
-        this.state = { SmsAuth: false };
+        this.state = { SmsAuth: false }
     }
 
    componentDidMount = () => {
@@ -18,12 +19,15 @@ class Main extends Component {
    }
 
     Navigate = (data) => {
-        this.context.router.history.push('/Profile/' + data.uid)
+    //  alert(`data:${JSON.stringify(data)}`)
+      alert(`router:${JSON.stringify(this.context)}`)
+      //  this.context.router.history.push('/Profile/' + data.uid)
     }
 
     SmsAuth = () => {
         this.setState({ SmsAuth: !this.state.SmsAuth })
     }
+
     render() {
         return (
             <div>
@@ -31,7 +35,7 @@ class Main extends Component {
                 </div>
                 <div>
                     <Head />
-                    <SignUp move={this.Navigate} SmsAuth={this.SmsAuth} />
+                    <SignUp Navigate={this.Navigate} SmsAuth={this.SmsAuth} />
                     {this.state.SmsAuth && <SmsAuth OFF={this.SmsAuth} />}
                 </div>
             </div>
@@ -43,4 +47,4 @@ export default Main;
 
 Main.contextTypes = {
     router: PropTypes.object
-};
+}

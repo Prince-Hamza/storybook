@@ -20,28 +20,21 @@ class Profile extends Component {
        setTimeout(()=>{
          this.setState({Connected:true})
        },1000)
-      
-   
-    
+
+
+
     }
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
             Timeline:true,
             Profile:true,
             About:false,
             Connected:false
          };
-        var Data = this.props.match              
-        var params = Data.params;
-        Routeid = params.id  
-
-       
-
-      
-
-
-
+            // Routeid is userid
+            Routeid = firebase.auth().currentUser?.uid
+            alert(`route/user id : ${Routeid}`)
         }
 
       Change = () => {
@@ -54,31 +47,30 @@ class Profile extends Component {
       }
 
 
-    render() {      
+    render() {
         if(this.state.Connected){
             return (<div>
-                <FeedSide />            
+                <FeedSide />
                 <Slide Key = {Routeid} />
-                <ProPix Key = {Routeid} />            
-                <Menu Hello = {this.Change} />  
-    
+                <ProPix Key = {Routeid} />
+                <Menu Hello = {this.Change} />
+
                   { this.state.Timeline && <Timeline Key = {Routeid} />}
-                  {   this.state.Profile && <ProPost Key = {Routeid} />  }   
-                  {   this.state.About &&  <About/>     }  
-                  {   this.state.About &&  <Friends/>   }  
-                 
-            </div>           
+                  {   this.state.Profile && <ProPost Key = {Routeid} />  }
+                  {   this.state.About &&  <About/>     }
+                  {   this.state.About &&  <Friends/>   }
+
+            </div>
             );
         }
 
         return(
             <p></p>
         )
-     
+
     }
 }
 
 export default Profile;
 
 var Routeid
-
